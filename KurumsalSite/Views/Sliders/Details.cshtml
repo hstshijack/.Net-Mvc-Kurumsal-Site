@@ -1,0 +1,49 @@
+﻿@model KurumsalSite.Models.Slider
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="card mt-5">
+        <div class="card-body">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Title)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Title)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.PictureUrl)
+                </dt>
+
+                <dd>
+                    <img src="@Model.PictureUrl" class="img-responsive" width="150" />
+                </dd>
+
+            </dl>
+        </div>
+    </div>
+
+    <p>
+        @Html.ActionLink("Güncelle", "Edit", new { id = Model.SliderId }, new { @class = "btn btn-success" })
+        <a class="btn btn-primary" href="/Sliders/Index">Geri Dön</a>
+        
+    </p>
+</div>
+
+
+
+

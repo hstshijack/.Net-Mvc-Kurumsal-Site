@@ -1,0 +1,14 @@
+﻿@model IEnumerable<KurumsalSite.Models.Service>
+
+@foreach (var item in Model)
+{
+    <div class="card" style="width: 16rem;">
+        <img class="card-img-top img-thumbnail" src="@item.PictureUrl" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">@item.Ttle</h5>
+            
+           
+        </div>
+    </div>
+   
+}

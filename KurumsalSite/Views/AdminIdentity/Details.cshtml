@@ -1,0 +1,64 @@
+﻿@model KurumsalSite.Models.Identity
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid">
+    <div class="card mt-5">
+        <div class="card-body">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Title)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Title)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Keywords)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Keywords)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+
+                <dd>
+                    @Html.Raw(Model.Description)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.LogoURL)
+                </dt>
+
+                <dd>
+                    <img src="@Model.LogoURL" class="img-responsive" width="150" />
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.SiteTitle)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.SiteTitle)
+                </dd>
+
+            </dl>
+        </div>
+    </div>
+    <p>
+        @Html.ActionLink("Güncelle", "Edit", new { id = Model.Id }, new { @class = "btn btn-success" })
+        @Html.ActionLink("Geri Dön", "Index", new { id = Model.Id }, new { @class = "btn btn-primary" })
+    </p>
+</div>
+
+
+    
+   
+
+

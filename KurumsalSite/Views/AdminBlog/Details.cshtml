@@ -1,0 +1,58 @@
+﻿@model KurumsalSite.Models.Blog
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="container-fluid">
+    <div class="card mt-5">
+        <div class="card-body">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.category.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.category.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Title)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Title)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Content)
+                </dt>
+
+                <dd>
+                    @Html.Raw(Model.Content)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.PictureURL)
+                </dt>
+
+                <dd>
+                    <img src="@Model.PictureURL" class="img-responsive" width="150" />
+                </dd>
+
+            </dl>
+
+            <p>
+                @Html.ActionLink("Güncelle", "Edit", new { id = Model.Id },new {@class="btn btn-success"}) 
+                <a class="btn btn-primary" href="/AdminBlog/Index">Geri Dön</a>
+             
+            </p>
+
+        </div>
+    </div>
+</div>
+
+    
+  

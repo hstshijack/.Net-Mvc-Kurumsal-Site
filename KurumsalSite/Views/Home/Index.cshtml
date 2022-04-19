@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+}
+
+
+<main id="main">
+
+    <!-- ======= Hero Section ======= -->
+    <div id="" class="d-flex align-items-center">
+        <img src="~/assets/images/marvin-meyer-SYTO3xs06fU-unsplash.jpg" class="img-fluid" />
+    </div><!-- End Hero -->
+    <!-- ======= Featured Services Section ======= -->
+    <section id="featured-services" class="featured-services">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row">
+                <h5>Hizmetlerimiz</h5>
+                @Html.Action("ServicesPartial", "Home")
+            </div>
+
+        </div>
+    </section><!-- End Featured Services Section -->
+
+
+</main><!-- End #main -->
+<!-- ======= Footer ======= -->

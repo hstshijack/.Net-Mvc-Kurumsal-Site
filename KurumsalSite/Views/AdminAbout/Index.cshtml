@@ -1,0 +1,45 @@
+﻿@model IEnumerable<KurumsalSite.Models.About>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+
+<div class="container-fluid">
+    <div class="card mt-5">
+        <div class="card-body">
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                  
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.Raw(item.Description)
+                        </td>
+                        <td>
+
+                            @Html.ActionLink("Güncelle", "Edit", new { id = item.Id },new {@class="btn btn-success"}) 
+                         
+                            
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+
+</div>
+
